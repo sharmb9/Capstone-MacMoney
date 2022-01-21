@@ -22,3 +22,68 @@
     transform: rotate(360deg);
   }
 }
+
+*
+{
+  font-family: Poppins
+}
+
+a
+{
+  text-decoration: none
+}
+
+.text-color-orange
+{
+  color: #FF7262
+}
+
+.bg-color-black
+{
+  background-color: #050A10
+}
+
+.bg-color-orange
+{
+  background-color: #FF7262
+}
+
+@media (max-width: 576px)
+{
+}
+
+@media (min-width: 576px)
+{
+}
+
+@media (min-width: 768px)
+{
+  .modal-dialog
+  {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .modal-dialog
+  {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .modal-dialog
+  {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1400px)
+{
+  .modal-dialog
+  {
+    max-width: 900px;
+  }
+}
