@@ -1,10 +1,11 @@
 import './App.css';
+import QuestionBox from './components/QuestionBox';
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>MacMoney</h1>
+        <QuestionBox/>
       </header>
     </div>
   );
