@@ -10,7 +10,7 @@ const QuestionBox = () => {
         { answerText: "On Campus", img: "assets/offcampus.png", feedback: "Nice! you decided to live on campus with fellow first years. Everything is already paid up front. " },
         { answerText: "Off Campus", img: "assets/oncampus.png", feedback: "Great choice! I did the same thing during my first year. You get to save quite more compared to living on campus and get to enjoy your freedom." },
         { answerText: "Commute", img: "assets/commute.png", feedback: "Domestic bliss!. The cheapest of the three options. You will be saving a lot of money by commuting and will not have to worry too much about spending money on food and accomodation." },
-      ],
+      ]
     },
     {
       questionText:
@@ -18,7 +18,16 @@ const QuestionBox = () => {
       answerOptions: [
         { answerText: "Cash", img: "assets/cash.png" },
         { answerText: "On Campus", img: "assets/oncampus.png" }
-      ],
+      ]
+    },
+    {
+      questionText:
+        "After doing some grocerries and paying off your rent, you have some extra money in hand. What would you usually do with this money?",
+      answerOptions: [
+        { answerText: "Invest", img: "assets/invest.png" },
+        { answerText: "Save", img: "assets/save.png" },
+        { answerText: "Spend", img: "assets/spend.png" }
+      ]
     },
   ];
 
