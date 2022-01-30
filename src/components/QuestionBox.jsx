@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 
 const QuestionBox = () => {
+  // Create ID for each question and answer
   const questions = [
     {
       questionText:
