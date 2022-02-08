@@ -1,11 +1,15 @@
 import './App.css';
+import Ntext from './components/NPC_text';
+import Navbar from './components/Navbar';
 
-const App = () => {
+
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>MacMoney</h1>
+    <div>
+      <header>
+      <Navbar />
       </header>
+      <Ntext />
     </div>
   );
 }
