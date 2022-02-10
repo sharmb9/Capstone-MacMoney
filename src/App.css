@@ -38,6 +38,16 @@ a
   color: #FF7262
 }
 
+.text-color-light-orange
+{
+  color: #F8889E;
+}
+
+.text-color-violet
+{
+  color: #686DE0;
+}
+
 .bg-color-black
 {
   background-color: #050A10
@@ -46,6 +56,11 @@ a
 .bg-color-orange
 {
   background-color: #FF7262
+}
+
+.bg-color-grey
+{
+  background-color: #656565;
 }
 
 @media (max-width: 576px)
