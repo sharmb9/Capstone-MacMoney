@@ -9,13 +9,14 @@
   z-index: 10;
   position: fixed;
   top: 36vh;
-  left: calc(50% - 20rem);
+  left: calc(50% - 23rem);
   font-family: 'Poppins', sans-serif;
 }
 p{
   font:inherit;
   text-align: left;
-  font-size: 1.5rem;;
+  font-size: 1.5rem;
+  margin-top: 0rem;
 }
 .return-icons{
   font-size: 2rem;
@@ -65,11 +66,13 @@ p{
 }
 .navbar{
   margin-top: 1rem;
+
+
 }
 .navbar li{
   display:inline;
   font-family: 'Poppins', sans-serif;
-  /* border: 1px solid #FF7262; */
+  
 
 }
 
@@ -77,14 +80,16 @@ p{
   color: #FF7262;
   font-weight: 800;
   font-size: 1.5rem;;
-  padding: .5rem 2rem;
-  margin-right: 122rem ;
+  padding: .25rem 2rem;
+  margin-right: 62%;
+
 
 }
 
 .nav-item{
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
+
 .nav-btn{
   font-size: 1.25rem;
   font-weight:700;
@@ -126,16 +131,15 @@ p{
   background-color: white;
   padding: 1rem 1.5rem;
   text-align: center;
-  /* width:45rem; */
+  width: 45rem;
   z-index: 10;
   position: fixed;
-  /* top: 36vh;
-  left: calc(50% - 20rem); */
-  left: 30%;
+  left: calc(50% - 23rem);
   right: 30%;
-  top: 34.91%;
-  bottom: 43%;
+  top: calc(50% - 13rem);
+  bottom: calc(50% - 10rem);
   font-family: 'Poppins', sans-serif;
+  overflow: auto;
 }
 .btn-feedback{
   /* position: relative;
