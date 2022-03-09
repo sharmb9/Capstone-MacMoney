@@ -83,6 +83,25 @@
     opacity: .5;
 }
 
+.option-feedback {
+    background-color: #F5F5FA;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    padding: 1rem 1.5rem;
+    text-align: left;
+    width:45rem;
+    z-index: 10;
+    position: fixed;
+    top: 36vh;
+    left: calc(50% - 20rem);
+    font-family: 'Poppins', sans-serif;
+  }
+  p{
+    font:inherit;
+    text-align: left;
+    font-size: 1.5rem; 
+    color: #121212;
+  }
 */
 /* .QuestionContainer {
     position: absolute;
