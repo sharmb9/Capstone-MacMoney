@@ -1,37 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import QFBtext from './QuestionFeedback';
-
+import questions from './questions'
 
 const QuestionBox = () => {
-  // Create ID for each question and answer
-  const questions = [
-    {
-      questionText:
-        "Hello there! So before we get started with money management, first you should decide where you will be living for the school year",
-      answerOptions: [
-        { answerText: "On Campus", img: "assets/offcampus.png", feedback: "Nice! you decided to live on campus with fellow first years. Everything is already paid up front. " },
-        { answerText: "Off Campus", img: "assets/oncampus.png", feedback: "Great choice! I did the same thing during my first year. You get to save quite more compared to living on campus and get to enjoy your freedom." },
-        { answerText: "Commute", img: "assets/commute.png", feedback: "Domestic bliss!. The cheapest of the three options. You will be saving a lot of money by commuting and will not have to worry too much about spending money on food and accomodation." },
-      ]
-    },
-    {
-      questionText:
-        "How do you pay for grocerries",
-      answerOptions: [
-        { answerText: "Cash", img: "assets/cash.png", feedback: 'smdjlsjdjd'},
-        { answerText: "On Campus", img: "assets/oncampus.png", feedback: 'khskhdhshhshkdshhdks' }
-      ]
-    },
-    {
-      questionText:
-        "After doing some grocerries and paying off your rent, you have some extra money in hand. What would you usually do with this money?",
-      answerOptions: [
-        { answerText: "Invest", img: "assets/invest.png" },
-        { answerText: "Save", img: "assets/save.png" },
-        { answerText: "Spend", img: "assets/spend.png" }
-      ]
-    },
-  ];
+
 
   //   setting current question to 0 means starting with first question
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -39,13 +11,19 @@ const QuestionBox = () => {
   const [showQFeedback, setShowQFeedback] = useState();
 
   const [feedback, setfeedback] = useState({message: ''});
+
+  const [selectedOption, setSelectedOption] = useState([]);
+
+  const SELECT_OPTIONS_KEY = "SelectedOptions"
   
-  //   shows the feedback when an option is clicked
+  //   shows the feedback when an option is clicked and (TODO) saves selected option to storage
   function handleOptionClick(option) {
     setShowQFeedback(true);
-    const newfeedback = {message: option};
+    const newfeedback = {message: option.feedback};
     setfeedback(newfeedback);
-    //   shows the feedback when an option is clicked
+    //   saves the option to local storage
+    setSelectedOption([...selectedOption, option])
+    localStorage.setItem(SELECT_OPTIONS_KEY,JSON.stringify(selectedOption));
    };
 
   //   goes to next question when next button on feedback is clicked
@@ -72,7 +50,7 @@ const QuestionBox = () => {
         <div className="option-section">
           {questions[currentQuestion].answerOptions.map((answerOption) => (
             <button
-              onClick={() => handleOptionClick(answerOption.feedback)}
+              onClick={() => handleOptionClick(answerOption)}
               className="option-button"
             >
               {answerOption.answerText}
