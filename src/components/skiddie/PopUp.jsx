@@ -16,7 +16,7 @@ class PopUp extends React.Component {
           <div className="modal-content bg-color-black p-3">
             <div className="mb-3 text-white">{ this.props.children }</div>
             <div className="d-flex justify-content-center">
-                <button type="button" className="btn bg-color-orange text-white" data-bs-dismiss="modal">Got it</button>
+                <button type="button" className=" btn bg-color-orange text-white" data-bs-dismiss="modal">Got it</button>
             </div>
           </div>
         </div>

@@ -25,7 +25,12 @@ a
 
 .bg-color-black
 {
-  background-color: #050A10
+  background-color: black;
+  border-radius: 30px;
+}
+.btn-white:hover{
+  background-color: white;
+  color: black;
 }
 
 .bg-color-orange
@@ -41,11 +46,15 @@ a
 .npc
 {
   position: fixed;
-  left: 20vw;
-  top: 60vh;
+  left: 12vw;
+  top: 68vh;
   width: 100px;
   height: 100px;
 }
+svg {
+   width: 70%; 
+   height: auto; 
+  }
 
 @media (max-width: 576px)
 {
