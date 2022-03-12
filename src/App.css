@@ -47,6 +47,11 @@ a
   height: 100px;
 }
 
+.intro
+{
+  padding-top: 10rem;
+}
+
 @media (max-width: 576px)
 {
 }

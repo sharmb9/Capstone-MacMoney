@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Home extends React.Component {
 
@@ -20,7 +21,7 @@ class Home extends React.Component {
               MacMoney
             </div>
             <div>
-              <a className="btn bg-color-orange text-white fs-5 px-5">Play</a>
+              <Link className="btn bg-color-orange text-white fs-5 px-5" to="/intro">Play</Link>
             </div>
           </div>
         </div>
