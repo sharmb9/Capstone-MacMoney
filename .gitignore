@@ -11,6 +11,8 @@
 # production
 /build
 
+# redundant file - only for local
+package-lock.json
 # misc
 .DS_Store
 .env.local
