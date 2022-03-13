@@ -8,43 +8,9 @@
     margin: 0;
 }
 
-.header {
-    height: 45px;
-    line-height: 45px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
-    display: block;
-    margin: 0;
-    width: 100%;
-    min-width: 1024px;
-    height: 48px;
-    max-height: 44px;
-    background: rgba(221, 221, 221, 0.92);
-    font-size: 17px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding-left: 60px;
-}
-
-.follow {
-    float: right;
-    margin-right: auto;
-}
-
-.follow img {
-    width: 25px;
-    position: relative;
-    top: 7px;
-}
-
 body {
     font-family: "Sen", sans-serif;
-    background: #657068
+    background: #aaa
 }
 
 .container {
@@ -177,6 +143,7 @@ body {
 .card {
     position: relative;
     padding-top: 50px;
+  
     /* width: 300px; */
 }
 
@@ -208,7 +175,7 @@ body {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     position: relative;
-    
+    box-shadow: 5px 0px 5px grey;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -225,7 +192,6 @@ body {
 
 .card .card-footer {
     padding: 3px;
-    background: #96f6b7;
     text-align: center;
     bottom: 0;
     position: relative;
