@@ -16,7 +16,7 @@ import Intro from './components/skiddie/Intro';
 
 const App = () => {
 
-   const npcmsg = "Hello Welcome to McMaster! This game will try to simulate to ";
+   const npcmsg = "Hello welcome to McMaster University! I am Shivam, your Student Mentor for this year. I will be helping you adjust to the new uni life with all thing finance. First let's get you settled down.";
 
   //   setting current question to 0 means starting with first component
   const [currentComponent, setCurrentComponent] = useState(0);

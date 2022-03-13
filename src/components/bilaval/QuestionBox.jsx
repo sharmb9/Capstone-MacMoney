@@ -5,6 +5,8 @@ import Npc from '../skiddie/Npc';
 import PopUpButton from '../skiddie/PopUpButton';
 import PopUp from '../skiddie/PopUp';
 import Ntext from '../danielzheng/NPC_text';
+import End from '../skiddie/End';
+
 const QuestionBox = () => {
 
 
@@ -19,7 +21,11 @@ const QuestionBox = () => {
 
   const [showTopic, setShowTopic] = useState();
 
+  const [isEnd, setIsEnd] = useState();
+
   const SELECT_OPTIONS_KEY = "SelectedOptions"
+  
+  let localStorageAnswers;
   
   //   shows the feedback when an option is clicked and (TODO) saves selected option to storage
   function handleOptionClick(option) {
@@ -31,6 +37,8 @@ const QuestionBox = () => {
     setSelectedOption([...selectedOption, option])
     localStorage.setItem(SELECT_OPTIONS_KEY,JSON.stringify(selectedOption));
     console.log("handleOption",currentQuestion)
+    // alert(localStorage.getItem(SELECT_OPTIONS_KEY))
+    
    };
 
   //   goes to next question when next button on feedback is clicked
@@ -59,6 +67,11 @@ const QuestionBox = () => {
       setShowTopic(true)
       console.log("isLast is true")
     }
+
+    if (questions[currentQuestion].EOF==true) {
+      setIsEnd(true)
+      console.log("isEnd is true")
+    }
     // on clicking next on topic, set showTopic to false
     setShowQFeedback(false);
     
@@ -74,7 +87,7 @@ const QuestionBox = () => {
     <>
     {/* render topic component here */}
       
-      {!showTopic && !showQFeedback &&<div className="question-container App-question">
+      {!isEnd && !showTopic && !showQFeedback &&<div className="question-container App-question">
         <div className="question-section">
           <div className="question-text">
             {questions[currentQuestion].questionText}
@@ -99,8 +112,9 @@ const QuestionBox = () => {
           {questions[currentQuestion].hint}
         </PopUp>
       </div>}
-      {showTopic && <Ntext txt = {questions[currentQuestion].topic}  action= {setTopicFalse}/> }
+      {!isEnd && showTopic && <Ntext txt = {questions[currentQuestion].topic}  action= {setTopicFalse}/> }
       {showQFeedback &&<><Npc/>< QFBtext text= {feedback.message} action={handleNextClick} /> </>}
+      {isEnd &&<End/>}
     </>
   );
 };
