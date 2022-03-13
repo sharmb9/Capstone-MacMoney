@@ -1,5 +1,5 @@
 import './App.css';
-import "./styles.css";
+import "./feedback.css";
 import Chart from "./chart2";
 
 
