@@ -1,7 +1,10 @@
 import React, { useState,useEffect } from "react";
 import QFBtext from './QuestionFeedback';
-import questions from './questions'
-
+import questions from './questions';
+import Npc from '../skiddie/Npc';
+import PopUpButton from '../skiddie/PopUpButton';
+import PopUp from '../skiddie/PopUp';
+import Ntext from '../danielzheng/NPC_text';
 const QuestionBox = () => {
 
 
@@ -14,30 +17,64 @@ const QuestionBox = () => {
 
   const [selectedOption, setSelectedOption] = useState([]);
 
+  const [showTopic, setShowTopic] = useState();
+
   const SELECT_OPTIONS_KEY = "SelectedOptions"
   
   //   shows the feedback when an option is clicked and (TODO) saves selected option to storage
   function handleOptionClick(option) {
     setShowQFeedback(true);
+    console.log("showFeddback is true")
     const newfeedback = {message: option.feedback};
     setfeedback(newfeedback);
     //   saves the option to local storage
     setSelectedOption([...selectedOption, option])
     localStorage.setItem(SELECT_OPTIONS_KEY,JSON.stringify(selectedOption));
+    console.log("handleOption",currentQuestion)
    };
 
   //   goes to next question when next button on feedback is clicked
-  const handleNextClick = () => {
-      const nextQuestion = currentQuestion + 1;
-      if (nextQuestion < questions.length){
-          setCurrentQuestion(nextQuestion)
-      }
-      setShowQFeedback(false);
-  };
+  // function handleNextClick(question){
+  //     const nextQuestion = currentQuestion + 1;
+  //     if (nextQuestion < questions.length){
+  //         setCurrentQuestion(nextQuestion)
+  //     }
+  //     if (question.isLast==true) {
+  //       setShowTopic(true)
+  //       console.log("isLast is true")
+  //     }
+  //     // on clicking next on topic, set showTopic to false
+  //     setShowQFeedback(false);
+      
+      
+  // };
+
+  function handleNextClick(){
+    console.log("next click",currentQuestion)
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length){
+        setCurrentQuestion(nextQuestion)
+    }
+    if (questions[currentQuestion].isLast==true) {
+      setShowTopic(true)
+      console.log("isLast is true")
+    }
+    // on clicking next on topic, set showTopic to false
+    setShowQFeedback(false);
+    
+    
+};
+
+  const setTopicFalse= () => {
+    setShowTopic(false)
+    console.log("next click",currentQuestion)
+  }
 
   return (
     <>
-      {!showQFeedback &&<div className="question-container App-question">
+    {/* render topic component here */}
+      
+      {!showTopic && !showQFeedback &&<div className="question-container App-question">
         <div className="question-section">
           <div className="question-text">
             {questions[currentQuestion].questionText}
@@ -57,8 +94,13 @@ const QuestionBox = () => {
             </button>
           ))}
         </div>
+        <Npc target="#hint"/>
+        <PopUp id="hint">
+          {questions[currentQuestion].hint}
+        </PopUp>
       </div>}
-      {showQFeedback &&< QFBtext text= {feedback.message} action={handleNextClick}/> }
+      {showTopic && <Ntext txt = {questions[currentQuestion].topic}  action= {setTopicFalse}/> }
+      {showQFeedback &&<><Npc/>< QFBtext text= {feedback.message} action={handleNextClick} /> </>}
     </>
   );
 };

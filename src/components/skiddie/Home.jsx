@@ -1,6 +1,12 @@
 import React from 'react';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.state = {
+    //   target: this.props.target
+    // };
+  }
 
   render() {
     return (
@@ -20,7 +26,7 @@ class Home extends React.Component {
               MacMoney
             </div>
             <div>
-              <a className="btn bg-color-orange text-white fs-5 px-5">Play</a>
+              <a className="btn bg-color-orange text-white fs-5 px-5" onClick={this.props.action} >Play</a>
             </div>
           </div>
         </div>

@@ -56,6 +56,11 @@ svg {
    height: auto; 
   }
 
+  .intro
+  {
+    padding-top: 10rem;
+  }
+
 @media (max-width: 576px)
 {
 }
