@@ -99,21 +99,28 @@ const QuestionBox = () => {
         </div>
         <div className="option-section">
           {questions[currentQuestion].answerOptions.map((answerOption) => (
-            <button
+            // <div>
+              // {/* <img src = "https://cdn-icons-png.flaticon.com/512/609/609803.png"></img> */}
+              // {/* <img src = {answerOption.img}></img> */}
+              <button
               onClick={() => handleOptionClick(answerOption)}
               className="option-button"
             >
+              {/* <span><img src = {answerOption.img}></img> </span> */}
+              {/* <span>{answerOption.answerText}</span> */}
+              <img src = {answerOption.img} height="100px" width="100px"></img><br></br>
               {answerOption.answerText}
             </button>
+            // {/* </div> */}
           ))}
         </div>
-        <Npc target="#hint"/>
+        <Npc target="#hint" img="https://cdn-icons-png.flaticon.com/512/2784/2784403.png"/>
         <PopUp id="hint">
           {questions[currentQuestion].hint}
         </PopUp>
       </div>}
       {!isEnd && showTopic && <Ntext txt = {questions[currentQuestion].topic}  action= {setTopicFalse}/> }
-      {showQFeedback &&<><Npc/>< QFBtext text= {feedback.message} action={handleNextClick} /> </>}
+      {showQFeedback &&<><Npc img="https://cdn-icons-png.flaticon.com/512/2784/2784403.png"/>< QFBtext text= {feedback.message} action={handleNextClick} /> </>}
       {isEnd &&<End/>}
     </>
   );

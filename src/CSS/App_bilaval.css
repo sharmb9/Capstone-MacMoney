@@ -1,3 +1,5 @@
+
+
 .App-question {
     min-height: 100vh;
     display: flex;
@@ -25,7 +27,7 @@
     border-radius: var(--size-radius);
     border: 3px solid var(--color-shadow, currentColor);
     box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor); */
-    background-color: #252d4a;
+    background-color: #244574;
     width: 650px;
     min-height: 200px;
     height: min-content;
@@ -51,8 +53,8 @@
 }
 
 .option-button {
-    background: #FEEF00;
-    border: 1px solid #FEEF00;
+    background: #ffffff;
+    /* border: 1px solid #FEEF00; */
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
     box-sizing: border-box;
@@ -126,6 +128,10 @@
 .App-link {
     color: #61dafb;
 }
+
+/* .img{
+    height:" 100px";
+} */
 
 @keyframes App-logo-spin {
     from {

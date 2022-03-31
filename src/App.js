@@ -5,6 +5,7 @@ import React, { useState,useEffect } from "react";
 
 
 import PopUpButton from './components/skiddie/PopUpButton';
+import HowTo from './components/bilaval/HowTo'
 import PopUp from './components/skiddie/PopUp';
 import Home from './components/skiddie/Home';
 import Npc from './components/skiddie/Npc';
@@ -52,9 +53,10 @@ const App = () => {
       {currentComponent==0 &&
       <><Ntext txt={npcmsg} action={handleNextClick}/>
       <Npc target="#hint"/>
+
       <PopUp id="hint">
         This is a hint.
-      </PopUp> </>} 
+      </PopUp> </>}
       {currentComponent==1 && <QuestionBox/>}
         </>}
     </div>

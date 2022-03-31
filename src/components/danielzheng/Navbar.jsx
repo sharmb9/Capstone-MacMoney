@@ -7,7 +7,7 @@ function Navbar (props) {
                 <span class=" mb-0  nav-logo">MacMoney</span>
                 <div class=" d-flex justify-content-end">
                 <ul class="navbar-nav ">
-                    <li class="nav-item">
+                    {/* <li class="nav-item">
                     <a class="nav-btn tut" href="#">Tutorial</a>
                     </li>
                     <li class="nav-item">
@@ -15,7 +15,7 @@ function Navbar (props) {
                     </li>
                     <li class="nav-item">
                     <a class="nav-btn contact" href="#">Contact Us</a>
-                    </li>
+                    </li> */}
                 </ul>
                 </div>
             </div>
