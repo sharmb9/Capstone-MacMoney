@@ -1,3 +1,4 @@
+
 *
 {
   font-family: Poppins
@@ -46,8 +47,8 @@ a
 .npc
 {
   position: fixed;
-  left: 12vw;
-  top: 68vh;
+  left: 20vw;
+  top: 65vh;
   width: 100px;
   height: 100px;
 }
@@ -100,3 +101,4 @@ svg {
     max-width: 900px;
   }
 }
+

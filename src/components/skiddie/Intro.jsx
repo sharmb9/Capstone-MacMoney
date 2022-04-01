@@ -13,10 +13,13 @@ class Intro extends React.Component {
       <div className="vh-100 bg-color-grey">
         <div className="container intro">
           <p className="fs-1 text-white mt-3">
-            Hi there! you are just about to start your journey as a MaraStart Nowuder.
-            Besides academics, extracurriculars and making friends,
-            you also want to make sure that you spend you money well and keep a track of your "wealth".
-            You will learn the basics of money management through this game by making a series of decisions.
+            <h1>How to use</h1>
+          <ul>
+              <li class="">The website tries to emulate financial situation of students.</li>
+              <li class="">Each question comes with various options. On selecting an option the user will be provided with a feedback.</li>
+              <li class="">There is no right or wrong option, instead the website aims to provide a feedback</li>
+              <li class="">Users can click on the NPC avatar at bottom left of each question if they want to know what other poeple who are experienced with handling similar financial situation would do</li>
+          </ul>
           </p>
           <div className="d-flex justify-content-center">
           <button className="btn bg-color-orange text-white fs-5 px-5 mt-5" onClick={this.props.action}>Start Now</button>
