@@ -64,9 +64,7 @@ function Node ({data})  {
       {startHandle(data.label)}
       {data.label}
 
-      <input type="button" class="nodrag"  onClick={handleOpen}  hidden={hid(data.feedback)}>
-        see feedback
-
+      <input type="button" class="nodrag" value="here" onClick={handleOpen}  hidden={hid(data.feedback)}>
       </input>
       <Modal open={anchorEl} onClose={handleClose}>
         <FeedbackPopUp
