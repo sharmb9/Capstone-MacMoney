@@ -6,7 +6,8 @@ import PopUpButton from '../skiddie/PopUpButton';
 import PopUp from '../skiddie/PopUp';
 import Ntext from '../danielzheng/NPC_text';
 import End from '../skiddie/End';
-
+import Graph from "../graph/Graph"
+import { WindPower } from "@mui/icons-material";
 const QuestionBox = () => {
 
 
@@ -38,7 +39,22 @@ const QuestionBox = () => {
     localStorage.setItem(SELECT_OPTIONS_KEY,JSON.stringify(selectedOption));
     console.log("handleOption",currentQuestion)
     // alert(localStorage.getItem(SELECT_OPTIONS_KEY))
-    
+
+    // adds option id and its feedback to the local storage.
+    // if( currentQuestion == 0){
+    //   window.localStorage.setItem("optionFeedback",JSON.stringify([]))
+    //   window.localStorage.setItem("optionSelected",JSON.stringify([]))
+    // }
+    // else {
+      var arr = JSON.parse(window.localStorage.getItem("optionFeedback"))
+      arr = arr.concat([{id: option.id, value: option.feedback}])
+      var arr2 = JSON.parse(window.localStorage.getItem("optionSelected"))
+      arr2 = arr2.concat([option.id])
+      window.localStorage.setItem("optionFeedback", JSON.stringify(arr))
+      window.localStorage.setItem("optionSelected", JSON.stringify(arr2))
+      
+    // }
+
    };
 
   //   goes to next question when next button on feedback is clicked
@@ -114,7 +130,7 @@ const QuestionBox = () => {
       </div>}
       {!isEnd && showTopic && <Ntext txt = {questions[currentQuestion].topic}  action= {setTopicFalse}/> }
       {showQFeedback &&<><Npc/>< QFBtext text= {feedback.message} action={handleNextClick} /> </>}
-      {isEnd &&<End/>}
+      {isEnd &&<Graph/>}
     </>
   );
 };
