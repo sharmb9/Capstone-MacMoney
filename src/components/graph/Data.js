@@ -15,7 +15,7 @@ function makeEdgeList (arr){
     }
     return res
 }
-console.log(edgeListTemp)
+// console.log(edgeListTemp)
 edgeList = makeEdgeList(edgeListTemp)
 console.log(edgeList)
 function yAxisLocation(stay = false) {
@@ -190,8 +190,8 @@ function addFeedback(elem, feedback) { //this adds the element to elem arr from 
     return elem
 }
 
-// elem = elem.concat(edgeList);
-// elem = addFeedback(elem, feedback)
+elem = elem.concat(edgeList);
+elem = addFeedback(elem, feedback)
 
 
 export default elem;

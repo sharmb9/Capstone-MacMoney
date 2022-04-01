@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Handle } from "react-flow-renderer";
 
-import { Typography, Popover, Modal, IconButton } from "@material-ui/core";
+import { Typography, Popover, Modal } from "@material-ui/core";
 import FeedbackPopUp from "./FeedbackPopup";
 function Node ({data})  {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -17,26 +17,8 @@ function Node ({data})  {
     setAnchorEl(true);
   };
   
-  function popOver() {
-    <div>
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center"
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center"
-        }}
-      >
-        <Typography>The content of the Popover.</Typography>
-      </Popover>
-    </div>;
-  }
+
+  
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 

@@ -7,7 +7,6 @@ import PopUp from '../skiddie/PopUp';
 import Ntext from '../danielzheng/NPC_text';
 import End from '../skiddie/End';
 import Graph from "../graph/Graph"
-import { WindPower } from "@mui/icons-material";
 const QuestionBox = () => {
 
 
