@@ -6,6 +6,7 @@ import PopUpButton from '../skiddie/PopUpButton';
 import PopUp from '../skiddie/PopUp';
 import Ntext from '../danielzheng/NPC_text';
 import End from '../skiddie/End';
+import Graph from "../graph/Graph"
 
 const QuestionBox = () => {
 
@@ -38,6 +39,14 @@ const QuestionBox = () => {
     localStorage.setItem(SELECT_OPTIONS_KEY,JSON.stringify(selectedOption));
     console.log("handleOption",currentQuestion)
     // alert(localStorage.getItem(SELECT_OPTIONS_KEY))
+
+    // saves selected option in nested json manner for Graph
+    var arr = JSON.parse(window.localStorage.getItem("optionFeedback"))
+    arr = arr.concat([{id: option.id, value: option.feedback}])
+    var arr2 = JSON.parse(window.localStorage.getItem("optionSelected"))
+    arr2 = arr2.concat([option.id])
+    window.localStorage.setItem("optionFeedback", JSON.stringify(arr))
+    window.localStorage.setItem("optionSelected", JSON.stringify(arr2))
     
    };
 
@@ -121,7 +130,7 @@ const QuestionBox = () => {
       </div>}
       {!isEnd && showTopic && <Ntext txt = {questions[currentQuestion].topic}  action= {setTopicFalse}/> }
       {showQFeedback &&<><Npc img="https://cdn-icons-png.flaticon.com/512/2784/2784403.png"/>< QFBtext text= {feedback.message} action={handleNextClick} /> </>}
-      {isEnd &&<End/>}
+      {isEnd &&<Graph/>}
     </>
   );
 };
