@@ -1,0 +1,104 @@
+
+*
+{
+  font-family: Poppins
+}
+
+a
+{
+  text-decoration: none
+}
+
+.text-color-orange
+{
+  color: #FF7262
+}
+
+.text-color-light-orange
+{
+  color: #F8889E;
+}
+
+.text-color-violet
+{
+  color: #686DE0;
+}
+
+.bg-color-black
+{
+  background-color: black;
+  border-radius: 30px;
+}
+.btn-white:hover{
+  background-color: white;
+  color: black;
+}
+
+.bg-color-orange
+{
+  background-color: #FF7262
+}
+
+.bg-color-grey
+{
+  background-color: #656565;
+}
+
+.npc
+{
+  position: fixed;
+  left: 20vw;
+  top: 65vh;
+  width: 100px;
+  height: 100px;
+}
+svg {
+   width: 70%; 
+   height: auto; 
+  }
+
+  .intro
+  {
+    padding-top: 10rem;
+  }
+
+@media (max-width: 576px)
+{
+}
+
+@media (min-width: 576px)
+{
+}
+
+@media (min-width: 768px)
+{
+  .modal-dialog
+  {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .modal-dialog
+  {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .modal-dialog
+  {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1400px)
+{
+  .modal-dialog
+  {
+    max-width: 900px;
+  }
+}
+
